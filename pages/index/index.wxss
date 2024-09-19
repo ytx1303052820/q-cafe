@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* 左侧分类 */
+.category-list {
+  width: 25%;
+  background-color: #ffffff;
+  border-right: 1px solid #f0f0f0;
+}
+
+.category-item {
+  padding: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.active {
+  background-color: #F17D30;
+  color: white;
+}
+
+/* 右侧菜单 */
+.menu-list {
+  flex: 1;
+  padding: 20rpx;
+  margin-bottom: 100rpx;
+  background-color: #fff;
+}
+
+.menu-category {
+  margin-bottom: 20rpx;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-image {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 8rpx;
+}
+
+.menu-content {
+  flex: 1;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.menu-name {
+  font-size: 34rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+
+.menu-price {
+  text-align: center;
+
+  font-size: 28rpx;
+  color: #F17D30;
+}
+
+/* 底部报名按钮独立区域 */
+.bottom-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.signup-btn {
+  background-color: #ff6b00;
+  color: white;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  text-align: center;
+}

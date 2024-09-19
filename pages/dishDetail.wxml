@@ -1,0 +1,14 @@
+
+<view class="container">
+  <button bindtap="chooseImage">选择图片</button>
+  <image src="{{imageUrl}}" mode="aspectFit" style="width: 300rpx; height: 300rpx;" />
+  <button bindtap="uploadImage" wx:if="{{imageUrl}}">上传图片</button>
+
+
+  
+  <dish-detail dish="{{dish}}" />
+
+  <view class="bottom-container">
+    <button class="signup-btn" bindtap="handleSignUp" data-src="https://sociallol.cn/QCafeTest/stephan.jpg">咨询/Contact</button>  </view>
+
+</view>

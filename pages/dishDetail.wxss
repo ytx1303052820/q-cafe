@@ -1,0 +1,24 @@
+
+/* 底部报名按钮独立区域 */
+.bottom-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.signup-btn {
+  background-color: #ff6b00;
+  color: white;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  text-align: center;
+}

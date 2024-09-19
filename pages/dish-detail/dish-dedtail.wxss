@@ -1,0 +1,42 @@
+.dish-detail-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+}
+
+.dish-image {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.dish-info {
+  margin-bottom: 20rpx;
+}
+
+.dish-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.dish-price {
+  font-size: 32rpx;
+  color: #F17D30;
+  margin-top: 10rpx;
+}
+
+.dish-description {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 40rpx;
+}
+.by-who {
+  display: block;
+  text-align: right;
+  margin-top: 20rpx; /* 控制与上方内容的间距 */
+  font-style: italic; /* 斜体效果，是否需要 */
+  font-size: 28rpx;
+  color: #666; /* 颜色可以根据需要修改 */
+}
