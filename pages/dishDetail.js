@@ -18,7 +18,6 @@ Page({
     }
   },
   getSplittedPrice(chineseName, englishName,price){
-    console.log("haha",chineseName, englishName,price)
     const chineseNameArray = chineseName.split('|')
     const englishNameArray = englishName.split('|')
     const priceArray = price.split('|')
