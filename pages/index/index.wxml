@@ -1,27 +1,83 @@
 <view class="container">
   <!-- 左侧分类 -->
   <scroll-view scroll-y="true" class="category-list">
-    <block wx:for="{{categories}}" wx:key="id">
+    <block wx:for="{{categories}}" wx:key="categoryId">
       <view 
-        class="category-item {{activeCategory === item.id ? 'active' : ''}}"
-        bindtap="selectCategory" data-id="{{item.id}}">
-        <text decode="{{true}}">{{item.name}}</text>
+        class="category-item {{activeCategory === item.categoryId ? 'active' : ''}}"
+        bindtap="selectCategory" data-id="{{item.categoryId}}">
+        <view><text decode="{{true}}">{{item.categoryChineseName}}</text></view>
+        <view><text decode="{{true}}">{{item.categoryEnglishName}}</text></view>
       </view>
     </block>
   </scroll-view>
 
   <!-- 右侧菜单 -->
   <scroll-view scroll-y="true" class="menu-list" scroll-into-view="{{scrollIntoView}}" scroll-with-animation="true" bindscroll="onMenuScroll">
-  <block wx:for="{{menuItems}}" wx:key="id">
-    <view id="category-{{item.id}}" class="menu-category">
-      <view class="category-title"><text decode="{{true}}">{{item.name}}</text></view>
-      <block wx:for="{{item.items}}" wx:key="id">
+
+  <block wx:for="{{menuItems}}" wx:for-item="categoryItem" wx:key="categoryId">
+    <view id="category-{{categoryItem.categoryId}}" class="menu-category">
+      <view class="category-title"><text decode="{{true}}">{{categoryItem.categoryChineseName}}</text></view>
+      <view class="category-title"><text decode="{{true}}">{{categoryItem.categoryEnglishName}}</text></view>
+      <block wx:for="{{categoryItem.menuItemResponses}}" wx:key="id">
         <view class="menu-item" bindtap="goToDetail" data-dish="{{item}}">
-          <image class="menu-image" src="{{item.image}}" />
-          <view class="menu-content">
-            <view class="menu-name"><text decode="{{true}}">{{item.name}}</text></view>
-            <view class="menu-price">￥{{item.price}}</view>
+          <image class="menu-image" mode="widthFix" src="https://sociallol.cn/QCAFE/{{item.filePath}}" />
+         
+          <view wx:if="{{item.menuItemId === 40}}" class="menu-content">
+            <block wx:for="{{coffeeData}}" wx:for-item="coffeeItem" wx:key="chineseName">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemChineseName}}</text></view>
+            <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemEnglishName}}</text></view>
+            <view class="menu-price">￥{{coffeeItem.itemPrice}}</view>
           </view>
+            </block> 
+          </view>
+
+          <view wx:if="{{item.menuItemId === 73}}" class="menu-content">
+            <block wx:for="{{softDrinkData}}" wx:for-item="coffeeItem" wx:key="chineseName">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemChineseName}}</text></view>
+            <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemEnglishName}}</text></view>
+            <view class="menu-price">￥{{coffeeItem.itemPrice}}</view>
+          </view>
+            </block> 
+          </view>
+
+          <view wx:if="{{item.menuItemId === 74}}" class="menu-content">
+            <block wx:for="{{softMilk}}" wx:for-item="coffeeItem" wx:key="chineseName">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemChineseName}}</text></view>
+            <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemEnglishName}}</text></view>
+            <view class="menu-price">￥{{coffeeItem.itemPrice}}</view>
+          </view>
+            </block> 
+          </view>
+
+          <view wx:if="{{item.menuItemId === 79}}" class="menu-content">
+            <block wx:for="{{asahi}}" wx:for-item="coffeeItem" wx:key="chineseName">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemChineseName}}</text></view>
+            <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemEnglishName}}</text></view>
+            <view class="menu-price">￥{{coffeeItem.itemPrice}}</view>
+          </view>
+            </block> 
+          </view>
+          
+          <view wx:if="{{item.menuItemId === 88}}" class="menu-content">
+            <block wx:for="{{branda}}" wx:for-item="coffeeItem" wx:key="chineseName">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemChineseName}}</text></view>
+            <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemEnglishName}}</text></view>
+            <view class="menu-price">￥{{coffeeItem.itemPrice}}</view>
+          </view>
+            </block> 
+          </view>
+          <view wx:if="{{(item.menuItemId !== 40) && (item.menuItemId !== 88) && (item.menuItemId !== 74)&& (item.menuItemId !== 79) && (item.menuItemId !== 73)}}" class="menu-content">
+
+            <view wx:if="{{item.chineseName}}" class="menu-name"><text decode="{{true}}">{{item.chineseName}}</text></view>
+            <view wx:if="{{item.englishName}}" class="menu-name"><text decode="{{true}}">{{item.englishName}}</text></view>
+            <view wx:if="{{item.price}}" class="menu-price">￥{{item.price}}</view>
+          </view>
+
         </view>
       </block>
     </view>
@@ -30,7 +86,7 @@
 
 
   <!-- 底部报名按钮 -->
-  <view class="bottom-container">
+  <!-- <view class="bottom-container">
     <button class="signup-btn" bindtap="handleSignUp" data-src="https://sociallol.cn/QCafeTest/stephan.jpg">咨询/Contact</button>
-  </view>
+  </view> -->
 </view>

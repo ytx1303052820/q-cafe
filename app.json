@@ -1,8 +1,29 @@
 {
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "菜单/Menu",
+        "iconPath": "/images/tab_bar/menu.png",
+        "selectedIconPath": "/images/tab_bar/menu-active.png"
+      },
+      {
+        "pagePath": "pages/story/story",
+        "text": "介绍/Story",
+        "iconPath": "/images/tab_bar/introduction.png",
+        "selectedIconPath": "/images/tab_bar/introduction-active.png"
+      }
+    ],
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#F17D30",
+    "color": "#000000"
+  },
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/dishDetail"
+    "pages/dishDetail",
+    "pages/story/story"
   ],
   "window": {
     "navigationBarTextStyle": "black",

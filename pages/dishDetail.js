@@ -1,14 +1,34 @@
 Page({
   data: {
-    dish: {}
+    dish: {},
+    coffeeData:[],
+
   },
 
   onLoad(options) {
     const dish = JSON.parse(decodeURIComponent(options.dish));
-    console.log("dish:",dish)
+    console.log("received dish:",dish)
     this.setData({
       dish
-    });
+    });  
+    if(dish.chineseName.includes("|")){
+      const result =this. getSplittedPrice(dish.chineseName, dish.englishName, dish.price)
+    this.setData({coffeeData:result})
+    console.log("coffeeData:",this.data.coffeeData)
+    }
+  },
+  getSplittedPrice(chineseName, englishName,price){
+    console.log("haha",chineseName, englishName,price)
+    const chineseNameArray = chineseName.split('|')
+    const englishNameArray = englishName.split('|')
+    const priceArray = price.split('|')
+
+    const result = chineseNameArray.map((_, index) => ({
+      itemChineseName: chineseNameArray[index],
+      itemEnglishName: englishNameArray[index],
+      itemPrice: priceArray[index]
+    }));
+    return result;
   },
   handleSignUp: function(e) {
 
@@ -27,56 +47,5 @@ Page({
   },
 
 
-
-  chooseImage: function () {
-    wx.chooseImage({
-      count: 1, // 允许选择的图片数量
-      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图
-      sourceType: ['album', 'camera'], // 从相册或相机选择
-      success: (res) => {
-        const tempFilePaths = res.tempFilePaths;
-        this.setData({
-          imageUrl: tempFilePaths[0] // 将图片路径保存到data中，显示在页面上
-        });
-      },
-      fail: (err) => {
-        console.error('选择图片失败', err);
-      }
-    });
-  },
-
-  // 上传图片
-  uploadImage: function () {
-    if (!this.data.imageUrl) {
-      wx.showToast({
-        title: '请先选择图片',
-        icon: 'none'
-      });
-      return;
-    }
-
-    wx.uploadFile({
-      url: 'https://your-server-endpoint.com/upload', // 替换为你的服务器地址
-      filePath: this.data.imageUrl, // 本地文件路径
-      name: 'file', // 后端接收文件的字段名
-      formData: {
-        user: 'testUser' // 传递其他数据，如用户信息
-      },
-      success: (res) => {
-        console.log('上传成功', res.data);
-        wx.showToast({
-          title: '上传成功',
-          icon: 'success'
-        });
-      },
-      fail: (err) => {
-        console.error('上传失败', err);
-        wx.showToast({
-          title: '上传失败',
-          icon: 'none'
-        });
-      }
-    });
-  }
-
-});
+}
+);
