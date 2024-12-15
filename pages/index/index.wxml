@@ -20,7 +20,7 @@
       <view class="category-title"><text decode="{{true}}">{{categoryItem.categoryChineseName}}</text></view>
       <view class="category-title"><text decode="{{true}}">{{categoryItem.categoryEnglishName}}</text></view>
       <block wx:for="{{categoryItem.menuItemResponses}}" wx:key="id">
-        <view class="menu-item" bindtap="goToDetail" data-dish="{{item}}">
+        <view class="menu-position" bindtap="goToDetail" data-dish="{{item}}">
           <image class="menu-image" mode="widthFix" src="https://sociallol.cn/QCAFE/{{item.filePath}}" />
          
           <view wx:if="{{item.menuItemId === 40}}" class="menu-content">

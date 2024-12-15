@@ -24,44 +24,48 @@ Page({
       categoryChineseName: item.categoryChineseName,
       categoryEnglishName: item.categoryEnglishName
   }));
+
+  const coffeeItemInOne = menuData.filter(item => item.categoryEnglishName === "Coffee")[0]
+    .menuItemResponses
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===40)[0];
+
+    const softItemsInOne = menuData.filter(item => item.categoryEnglishName === "Soft drinks")[0]
+    .menuItemResponses
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===73)[0];
+
+    const softMilkInOne = menuData.filter(item => item.categoryEnglishName === "Soft drinks")[0]
+    .menuItemResponses
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===74)[0];
+    
+    const asahiInOne = menuData.filter(item => item.categoryEnglishName === "Beer & Fruity beers")[0]
+    .menuItemResponses
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===79)[0];
+
+    const brandaInOne = menuData.filter(item => item.categoryEnglishName === "Beer & Fruity beers")[0]
+    .menuItemResponses
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===88)[0];
+
+    const juiceInOne = menuData.filter(item => item.categoryEnglishName === "Hot drinks")[0]
+    .menuItemResponses
+     .filter(menuItemResponse=>menuItemResponse.menuItemId===59)[0];
+
   this.setData({
+    coffeeData:this.getSplittedPrice(coffeeItemInOne.chineseName, coffeeItemInOne.englishName, coffeeItemInOne.price),
+    softDrinkData:this.getSplittedPrice(softItemsInOne.chineseName, softItemsInOne.englishName, softItemsInOne.price),
+    softMilk:this.getSplittedPrice(softMilkInOne.chineseName, softMilkInOne.englishName, softMilkInOne.price),
+    asahi:this.getSplittedPrice(asahiInOne.chineseName, softMilkInOne.englishName, softMilkInOne.price),
+    branda:this.getSplittedPrice(brandaInOne.chineseName, brandaInOne.englishName, brandaInOne.price),
+    juice:this.getSplittedPrice(juiceInOne.chineseName, juiceInOne.englishName, juiceInOne.price),
+
     categories: menuCategories,
     menuItems: menuData
   }, () => {
-    this.calculateCategoryHeights()});
-    const coffeeItemInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Coffee")[0]
-    .menuItemResponses
-    .filter(menuItemResponse=>menuItemResponse.menuItemId===40)[0];
-    this.setData({coffeeData:this.getSplittedPrice(coffeeItemInOne.chineseName, coffeeItemInOne.englishName, coffeeItemInOne.price)})
-
-    const softItemsInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Soft drinks")[0]
-    .menuItemResponses
-    .filter(menuItemResponse=>menuItemResponse.menuItemId===73)[0];
-    this.setData({softDrinkData:this.getSplittedPrice(softItemsInOne.chineseName, softItemsInOne.englishName, softItemsInOne.price)})
-
-    const softMilkInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Soft drinks")[0]
-    .menuItemResponses
-    .filter(menuItemResponse=>menuItemResponse.menuItemId===74)[0];
-    this.setData({softMilk:this.getSplittedPrice(softMilkInOne.chineseName, softMilkInOne.englishName, softMilkInOne.price)})
-    
-    const asahiInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Beer & Fruity beers")[0]
-    .menuItemResponses
-    .filter(menuItemResponse=>menuItemResponse.menuItemId===79)[0];
-    this.setData({asahi:this.getSplittedPrice(asahiInOne.chineseName, softMilkInOne.englishName, softMilkInOne.price)})
-
-    const brandaInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Beer & Fruity beers")[0]
-    .menuItemResponses
-    .filter(menuItemResponse=>menuItemResponse.menuItemId===88)[0];
-    this.setData({branda:this.getSplittedPrice(brandaInOne.chineseName, brandaInOne.englishName, brandaInOne.price)})
-
-    const juiceInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Hot drinks")[0]
-    .menuItemResponses
-     .filter(menuItemResponse=>menuItemResponse.menuItemId===59)[0];
-    this.setData({branda:this.getSplittedPrice(brandaInOne.chineseName, brandaInOne.englishName, brandaInOne.price)})
-    this.setData({juice:this.getSplittedPrice(juiceInOne.chineseName, juiceInOne.englishName, juiceInOne.price)})
-
+    setTimeout(() => {
+      this.calculateCategoryHeights();  // 使用箭头函数，确保 `this` 保持正确
+    }, 300);  // 延时300ms确保页面内容渲染完成
+  }
+    );
     },
-
 
   // 计算每个分类的高度
   calculateCategoryHeights() {
@@ -88,20 +92,23 @@ Page({
 
     const scrollTop = e.detail.scrollTop;
     const categoryHeights = this.data.categoryHeights;
+    let scrollTimeout = null;
 
-    for (let i = 0; i < categoryHeights.length; i++) {
-      if (scrollTop < categoryHeights[i]) {
-        this.setData({ activeCategory: this.data.categories[i].categoryId ,
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      for (let i = 0; i < categoryHeights.length; i++) {
+        if (scrollTop < categoryHeights[i]) {
+          this.setData({
+            activeCategory: this.data.categories[i].categoryId,
           categoryScrollIntoView: `category-name-${this.data.activeCategory}`
           });
-          console.log("activeCategory",this.data.activeCategory)
-
-                  break;
+          break;
+        }
       }
-    }
-
+    }, 100);  // 设置防抖延时（100ms）
 
   },
+
 
   // 点击左侧分类时跳转到对应分类菜单
   selectCategory(e) {
