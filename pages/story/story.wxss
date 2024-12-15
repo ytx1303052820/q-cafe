@@ -3,15 +3,8 @@
   background-color: #f9f9f9;
 }
 
-.header {
-  background-color: #F17D30;
-  padding: 25rpx;
-  text-align: center;
-  color: white;
-}
-
 .title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -23,6 +16,19 @@
   margin: 10px 0;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.bye {
+  margin: 10px 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+
+.seeyou {
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
 }
 
 .intro-image {
@@ -50,6 +56,12 @@
 }
 
 .address {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center; /* 文本居中 */
+}
+.subscription{
   font-size: 16px;
   color: #333;
   text-align: center; /* 文本居中 */

@@ -29,27 +29,29 @@ Page({
     menuItems: menuData
   }, () => {
     this.calculateCategoryHeights()});
-    const coffeeItemInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Coffee")[0].menuItemResponses[0];
+    const coffeeItemInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Coffee")[0]
+    .menuItemResponses
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===40)[0];
     this.setData({coffeeData:this.getSplittedPrice(coffeeItemInOne.chineseName, coffeeItemInOne.englishName, coffeeItemInOne.price)})
 
     const softItemsInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Soft drinks")[0]
     .menuItemResponses
-     .filter(menuItemResponse=>menuItemResponse.filePath.includes("9ec2947d-6bf2-4dec-9c11-1947b14931cc"))[0];
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===73)[0];
     this.setData({softDrinkData:this.getSplittedPrice(softItemsInOne.chineseName, softItemsInOne.englishName, softItemsInOne.price)})
 
     const softMilkInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Soft drinks")[0]
     .menuItemResponses
-     .filter(menuItemResponse=>menuItemResponse.filePath.includes("0c6b69c7-608e-42f6-88d2-688a6e9ec1bc"))[0];
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===74)[0];
     this.setData({softMilk:this.getSplittedPrice(softMilkInOne.chineseName, softMilkInOne.englishName, softMilkInOne.price)})
-
+    
     const asahiInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Beer & Fruity beers")[0]
     .menuItemResponses
-     .filter(menuItemResponse=>menuItemResponse.filePath.includes("db252a82-e674-40a0-8b24-5d10de9f9065"))[0];
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===79)[0];
     this.setData({asahi:this.getSplittedPrice(asahiInOne.chineseName, softMilkInOne.englishName, softMilkInOne.price)})
 
     const brandaInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Beer & Fruity beers")[0]
     .menuItemResponses
-     .filter(menuItemResponse=>menuItemResponse.filePath.includes("15faf5c1-07d6-4aff-bf4f-5907f88b24cc"))[0];
+    .filter(menuItemResponse=>menuItemResponse.menuItemId===88)[0];
     this.setData({branda:this.getSplittedPrice(brandaInOne.chineseName, brandaInOne.englishName, brandaInOne.price)})
 
     const juiceInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Hot drinks")[0]
@@ -90,7 +92,10 @@ Page({
     for (let i = 0; i < categoryHeights.length; i++) {
       if (scrollTop < categoryHeights[i]) {
         this.setData({ activeCategory: this.data.categories[i].categoryId ,
-          categoryScrollIntoView: `category-name-${this.data.activeCategory}`});
+          categoryScrollIntoView: `category-name-${this.data.activeCategory}`
+          });
+          console.log("activeCategory",this.data.activeCategory)
+
                   break;
       }
     }
