@@ -1,8 +1,9 @@
 <view class="container">
   <!-- 左侧分类 -->
-  <scroll-view scroll-y="true" class="category-list">
+  <scroll-view scroll-y="true" class="category-list" scroll-into-view="{{categoryScrollIntoView}}" scroll-with-animation="true" >
     <block wx:for="{{categories}}" wx:key="categoryId">
       <view 
+      id="category-name-{{item.categoryId}}"
         class="category-item {{activeCategory === item.categoryId ? 'active' : ''}}"
         bindtap="selectCategory" data-id="{{item.categoryId}}">
         <view><text decode="{{true}}">{{item.categoryChineseName}}</text></view>
@@ -71,7 +72,17 @@
           </view>
             </block> 
           </view>
-          <view wx:if="{{(item.menuItemId !== 40) && (item.menuItemId !== 88) && (item.menuItemId !== 74)&& (item.menuItemId !== 79) && (item.menuItemId !== 73)}}" class="menu-content">
+
+          <view wx:if="{{item.menuItemId === 59}}" class="menu-content">
+            <block wx:for="{{juice}}" wx:for-item="coffeeItem" wx:key="chineseName">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemChineseName}}</text></view>
+            <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemEnglishName}}</text></view>
+            <view class="menu-price">￥{{coffeeItem.itemPrice}}</view>
+          </view>
+            </block> 
+          </view>
+          <view wx:if="{{(item.menuItemId !== 40) && (item.menuItemId !== 88) && (item.menuItemId !== 74)&& (item.menuItemId!== 79) && (item.menuItemId !== 73)&& (item.menuItemId !== 59)}}" class="menu-content">
 
             <view wx:if="{{item.chineseName}}" class="menu-name"><text decode="{{true}}">{{item.chineseName}}</text></view>
             <view wx:if="{{item.englishName}}" class="menu-name"><text decode="{{true}}">{{item.englishName}}</text></view>

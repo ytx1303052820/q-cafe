@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20rpx;
+  padding-top: 10rpx;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -49,6 +49,7 @@
 }
 
 .menu-content {
+  padding: 20rpx;
   flex: 1;
   align-items: center;
   margin-left: 20rpx;
@@ -63,7 +64,6 @@
 .menu-text {
   white-space: pre-line;
 }
-
 
 .menu-price {
   text-align: center;

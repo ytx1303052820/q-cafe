@@ -6,11 +6,13 @@ Page({
     categoryHeights: [],
     scrollTop: 0,
     scrollIntoView: '',
+    categoryScrollIntoView: '',
     coffeeData:[],
     softDrinkData:[],
     softMilk:[],
     asahi:[],
     branda:[],
+    juice:[],
     isClickingCategory: false  // 用于标记是否是通过点击触发的滚动
   },
 
@@ -50,6 +52,12 @@ Page({
      .filter(menuItemResponse=>menuItemResponse.filePath.includes("15faf5c1-07d6-4aff-bf4f-5907f88b24cc"))[0];
     this.setData({branda:this.getSplittedPrice(brandaInOne.chineseName, brandaInOne.englishName, brandaInOne.price)})
 
+    const juiceInOne = this.data.menuItems.filter(item => item.categoryEnglishName === "Hot drinks")[0]
+    .menuItemResponses
+     .filter(menuItemResponse=>menuItemResponse.menuItemId===59)[0];
+    this.setData({branda:this.getSplittedPrice(brandaInOne.chineseName, brandaInOne.englishName, brandaInOne.price)})
+    this.setData({juice:this.getSplittedPrice(juiceInOne.chineseName, juiceInOne.englishName, juiceInOne.price)})
+
     },
 
 
@@ -81,8 +89,9 @@ Page({
 
     for (let i = 0; i < categoryHeights.length; i++) {
       if (scrollTop < categoryHeights[i]) {
-        this.setData({ activeCategory: this.data.categories[i].categoryId });
-        break;
+        this.setData({ activeCategory: this.data.categories[i].categoryId ,
+          categoryScrollIntoView: `category-name-${this.data.activeCategory}`});
+                  break;
       }
     }
 
