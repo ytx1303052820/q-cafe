@@ -21,6 +21,15 @@
       <view class="category-title"><text decode="{{true}}">{{categoryItem.categoryEnglishName}}</text></view>
       <block wx:for="{{categoryItem.menuItemResponses}}" wx:key="id">
         <view class="menu-position" bindtap="goToDetail" data-dish="{{item}}">
+          <view wx:if="{{item.menuItemId === 74}}" class="menu-item-title">
+            <view class="category-title"><text decode="{{true}}">奶昔,四种口味</text></view>
+           <view class="category-title"><text decode="{{true}}">Milkshake in four flavors</text></view>
+          </view>
+
+          <view wx:if="{{item.menuItemId === 88}}" class="menu-item-title">
+            <view class="category-title"><text decode="{{true}}">巴兰德沁啤</text></view>
+           <view class="category-title"><text decode="{{true}}">Brander Beerpop</text></view>
+          </view>
           <image class="menu-image" mode="widthFix" src="https://sociallol.cn/QCAFE/{{item.filePath}}" />
          
           <view wx:if="{{item.menuItemId === 40}}" class="menu-content">

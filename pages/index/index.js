@@ -53,7 +53,7 @@ Page({
     coffeeData:this.getSplittedPrice(coffeeItemInOne.chineseName, coffeeItemInOne.englishName, coffeeItemInOne.price),
     softDrinkData:this.getSplittedPrice(softItemsInOne.chineseName, softItemsInOne.englishName, softItemsInOne.price),
     softMilk:this.getSplittedPrice(softMilkInOne.chineseName, softMilkInOne.englishName, softMilkInOne.price),
-    asahi:this.getSplittedPrice(asahiInOne.chineseName, softMilkInOne.englishName, softMilkInOne.price),
+    asahi:this.getSplittedPrice(asahiInOne.chineseName, asahiInOne.englishName, asahiInOne.price),
     branda:this.getSplittedPrice(brandaInOne.chineseName, brandaInOne.englishName, brandaInOne.price),
     juice:this.getSplittedPrice(juiceInOne.chineseName, juiceInOne.englishName, juiceInOne.price),
 

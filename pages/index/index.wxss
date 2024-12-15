@@ -34,7 +34,20 @@
 .menu-category {
   margin-bottom: 20rpx;
 }
+.menu-position {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
 
+.menu-item-title{
+  margin-bottom: 15rpx;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .menu-item {
   display: flex;
   flex-direction: column;

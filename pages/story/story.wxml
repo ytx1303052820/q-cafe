@@ -3,52 +3,52 @@
     <text class="title">Q Café 是什么？What is Q Café about?</text>
   </view>
   <view class="content">
-    <image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/new1.jpg" src="https://sociallol.cn/QCAFE/story/new1.jpg" class="menu-image" mode="aspectFit"  />
+    <image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/new1.jpg" src="https://sociallol.cn/QCAFESTORY/1.jpg" class="menu-image" mode="aspectFit"  />
     <text class="description">欢迎来到Q Café，这里是咖啡和美食爱好者的理想地，位于大连市中心，交通便利。
 Q Café is the perfect spot for all coffee and food lovers seeking a comfortable and
 inviting ambiance that's conveniently located in Dalian’s city center.</text>    
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 <text class="description">在Q Cafe，我们以提供温暖且温馨的氛围而自豪，您可以在这里与朋友放松，工作或者享受您的休息时间。我们舒适的座椅、舒缓的音乐和温馨的装饰营造出的氛围，会让您有在家般轻松自如的感觉。
 At Q Cafe, we pride ourselves on providing a warm and welcoming atmosphere where you can relax and unwind with friends, work, or simply enjoy some downtime. Our cozy seating, music and décor, creates a comfortable ambiance that makes you feel right at home.</text>    
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/pic2.jpg" src="https://sociallol.cn/QCAFE/story/pic2.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/pic2.jpg" src="https://sociallol.cn/QCAFESTORY/2.jpg" class="menu-image" mode="widthFix"  />
 
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 <text class="description">Q Café是您体验正宗德国香肠的目的地。从经典的香肠，充满美味的风味，到多汁的奶酪香肠，再到传统的咖喱香肠带来的诱人刺激，Q Café总有一款香肠能满足您的每一种渴望
 Q Café is your destination for authentic German sausage experiences. From the classic bratwurst, burstingwith savory flavors, over a juicy cheese Krainer, to the traditional currywurst offering a tantalizing kick, Q Café has a sausage to satisfy every craving.
 无论您是想吃点快餐还是与朋友一起悠闲地共享美食，Q Café 都能为您提供德国风味
 Whether you're looking for a quick bite or a leisurely meal to share with friends, Q Café promises a taste ofGermany, right in your neighborhood.</text>
 
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/germanquality.jpg" src="https://sociallol.cn/QCAFE/story/germanquality.jpg" class="menu-image" mode="widthFix"  />
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/germanquality.jpg" src="https://sociallol.cn/QCAFESTORY/3.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 
 
 <text class="description">我们提供多种咖啡，从经典浓缩咖啡到奶油卡布奇诺和各种类型的拿铁咖啡。当然别忘记我们的苏打咖啡，还有咖啡特调比如薄荷莫吉托咖啡和冰草莓拿铁。
 We offer a wide selection of coffees, from classic espresso to creamy cappuccinos and indulgent lattes. Not to forget our soda coffees, or specialties such as Mint Mojito Ice Coffee or Iced Strawberry Latte.</text>
-<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFE/story/alldrinks.png" src="https://sociallol.cn/QCAFE/story/alldrinks.png" class="menu-image" mode="widthFix"  />
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFESTORY/alldrinks.png" src="https://sociallol.cn/QCAFESTORY/4.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 
 <text class="description">在春夏季节，我们的半户外座位区是享用咖啡和沐浴阳光的理想场所。
 During the warmer months, our semi-outdoor seating area is the perfect place to enjoy your coffee and soak up the sun. </text>
-<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFE/story/pic5.jpg" src="https://sociallol.cn/QCAFE/story/pic5.jpg" class="menu-image" mode="widthFix"  />
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFESTORY/pic5.jpg" src="https://sociallol.cn/QCAFESTORY/5.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 
 
 <text class="description">如果您赶时间，我们还提供便捷的外卖服务，让您可以随时随地享用我们美味的咖啡和食物
 And if you're in a rush, we also offer a convenient takeout service, so you can enjoy our delicious coffee and food on-the-go. </text>
-<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFE/story/pic6.jpg" src="https://sociallol.cn/QCAFE/story/pic6.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFESTORY/pic6.jpg" src="https://sociallol.cn/QCAFESTORY/6.jpg" class="menu-image" mode="widthFix"  />
 
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 <text class="description">如果您更喜欢晚间饮品，我们还提供鸡尾酒和各种饮品。没有什么比下班后来一杯浓缩马提尼或其他咖啡鸡尾酒能让夜晚变得更加美好了。
 If some evening drinks are more your thing, ask us about our cocktail and beverage menu. Nothing gets a night going like espresso martinis after work.</text>
 
-<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFE/story/pic7.jpg" src="https://sociallol.cn/QCAFE/story/pic7.jpg" class="menu-image" mode="widthFix"  />
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFESTORY/pic7.jpg" src="https://sociallol.cn/QCAFESTORY/7.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 <text class="description">如果你想举办生日派对，家庭聚会，商务活动或者只是想和朋友小聚一下，我们可以接纳20人的聚会。可以随时联系店主李惠或者她的德国丈夫Stephan。
 If you’re looking for a great location for a birthday party, family get together, business event, or just for a nice gathering of friends, we can accommodate
 groups of up to 20 people. Feel free to contact the owner Li Hui or her German husband Stephan. </text>
-<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFE/story/pic8.jpg" src="https://sociallol.cn/QCAFE/story/pic8.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFESTORY/pic8.jpg" src="https://sociallol.cn/QCAFESTORY/8.jpg" class="menu-image" mode="widthFix"  />
 
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 <text class="description">在Q Cafe，我们的价格友好，而且地理位置便利，可乘坐公共交通工具或驾车轻松到达，我们还提供充足的停车位。那么你今天为什么不来呢？我们已经迫不及待地想要见到你了。
 At Q Café, we offer competitive prices that won't break the bank, and our convenient location is easily accessible by public transportation or driving, with ample parking available. So why not come and visit us today? We can't wait to serve you. 
 
@@ -56,7 +56,7 @@ At Q Café, we offer competitive prices that won't break the bank, and our conve
 Kindly note that making a reservation in advance is advised when planning to visit with more than two people to ensure optimal service provision.
 </text>
 
-<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFE/story/line.jpg" src="https://sociallol.cn/QCAFE/story/line.jpg" class="menu-image" mode="widthFix"  />
+<image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 <text class="bye">Q Café，每天上午 11 点至晚上 11 点开放 
 Q Café, open daily from 11am until 11pm.
         </text>
@@ -78,7 +78,7 @@ Q Café, open daily from 11am until 11pm.
 Scan the QR code, follow our Wechat account, give us Likes and stay tuned for Q Café news and special offers!
 </text>
 </view>
-  <image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFE/story/scanCode.jpg" src="https://sociallol.cn/QCAFE/story/scanCode.jpg" class="menu-image" mode="widthFix"  />
+  <image bindtap="previewImage"  data-src="https://sociallol.cn/QCAFESTORY/scanCode.jpg" src="https://sociallol.cn/QCAFESTORY/9.jpg" class="menu-image" mode="widthFix"  />
 
 </view>
 
