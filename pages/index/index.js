@@ -13,6 +13,7 @@ Page({
     asahi:[],
     branda:[],
     juice:[],
+    redsweet:[],
     isClickingCategory: false  // 用于标记是否是通过点击触发的滚动
   },
 
@@ -49,6 +50,9 @@ Page({
     .menuItemResponses
      .filter(menuItemResponse=>menuItemResponse.menuItemId===59)[0];
 
+     const redsweetInOne = menuData.filter(item => item.categoryEnglishName === "WINE & SPRITZER")[0]
+     .menuItemResponses
+      .filter(menuItemResponse=>menuItemResponse.menuItemId===103)[0];
   this.setData({
     coffeeData:this.getSplittedPrice(coffeeItemInOne.chineseName, coffeeItemInOne.englishName, coffeeItemInOne.price),
     softDrinkData:this.getSplittedPrice(softItemsInOne.chineseName, softItemsInOne.englishName, softItemsInOne.price),
@@ -56,7 +60,7 @@ Page({
     asahi:this.getSplittedPrice(asahiInOne.chineseName, asahiInOne.englishName, asahiInOne.price),
     branda:this.getSplittedPrice(brandaInOne.chineseName, brandaInOne.englishName, brandaInOne.price),
     juice:this.getSplittedPrice(juiceInOne.chineseName, juiceInOne.englishName, juiceInOne.price),
-
+    redsweet:this.getSplittedPrice(redsweetInOne.chineseName, redsweetInOne.englishName, redsweetInOne.price),
     categories: menuCategories,
     menuItems: menuData
   }, () => {
@@ -73,14 +77,32 @@ Page({
     const categoryHeights = [];
     let heightSum = 0;
 
-    query.selectAll('.menu-category').boundingClientRect((rects) => {
-      rects.forEach((rect) => {
-        heightSum += rect.height;
-        categoryHeights.push(heightSum);
-      });
+    query.selectAll('.menu-category').boundingClientRect()
+    
+    // ((rects) => {
+    //   rects.forEach((rect) => {
+    //     heightSum += rect.height;
+    //     categoryHeights.push(heightSum);
+    //   });
+    let heightArr = [0]
+    query.selectViewport().scrollOffset()
+    query.exec(function (res) {
+      res[0].top // #the-id节点的上边界坐标
+      res[1].scrollTop // 显示区域的竖直滚动位置
+      res[0].map( val => {
+        let result = val.height  + heightArr[heightArr.length - 1]
+        console.log(result)
+        // 拿后一个view盒子的高度加上前面的高度
+        heightArr.push(result) 
+      })
+      console.log("heightArr:",heightArr)
 
-      this.setData({ categoryHeights });
-    }).exec();
+
+    })
+    console.log("categoryHeights:",this.data.categoryHeights)
+
+    this.setData({ categoryHeights:heightArr });
+
   },
 
   // 右侧菜单滚动监听
@@ -94,18 +116,30 @@ Page({
     const categoryHeights = this.data.categoryHeights;
     let scrollTimeout = null;
 
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      for (let i = 0; i < categoryHeights.length; i++) {
-        if (scrollTop < categoryHeights[i]) {
-          this.setData({
-            activeCategory: this.data.categories[i].categoryId,
+    let st = e.detail.scrollTop
+    console.log('st' + e.detail.scrollTop,this.data.categoryHeights)
+    for(let i = 0; i < this.data.categoryHeights.length; i++){
+      if(st >= this.data.categoryHeights[i] && st <= this.data.categoryHeights[i+1] - 5){
+        this.setData({
+                   activeCategory: this.data.categories[i].categoryId,
           categoryScrollIntoView: `category-name-${this.data.activeCategory}`
-          });
-          break;
-        }
+        })
+        return
       }
-    }, 100);  // 设置防抖延时（100ms）
+    }
+    // clearTimeout(scrollTimeout);
+    // scrollTimeout = setTimeout(() => {
+    //   for (let i = 0; i < categoryHeights.length; i++) {
+    //     if (scrollTop < categoryHeights[i] && scrollTop < categoryHeights[i+1]) {
+    //       console.log("scrollTop:",scrollTop, "categoryHeights:",categoryHeights)
+    //       this.setData({
+    //         activeCategory: this.data.categories[i].categoryId,
+    //       categoryScrollIntoView: `category-name-${this.data.activeCategory}`
+    //       });
+    //       break;
+    //     }
+    //   }
+    // }, 100);  // 设置防抖延时（100ms）
 
   },
 

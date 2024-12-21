@@ -14,9 +14,9 @@ At Q Cafe, we pride ourselves on providing a warm and welcoming atmosphere where
 
 <image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />
 <text class="description">Q Café是您体验正宗德国香肠的目的地。从经典的香肠，充满美味的风味，到多汁的奶酪香肠，再到传统的咖喱香肠带来的诱人刺激，Q Café总有一款香肠能满足您的每一种渴望
-Q Café is your destination for authentic German sausage experiences. From the classic bratwurst, burstingwith savory flavors, over a juicy cheese Krainer, to the traditional currywurst offering a tantalizing kick, Q Café has a sausage to satisfy every craving.
+Q Café is your destination for authentic German sausage experiences. From the classic bratwurst, bursting with savory flavors, over a juicy cheese Krainer, to the traditional currywurst offering a tantalizing kick, Q Café has a sausage to satisfy every craving.
 无论您是想吃点快餐还是与朋友一起悠闲地共享美食，Q Café 都能为您提供德国风味
-Whether you're looking for a quick bite or a leisurely meal to share with friends, Q Café promises a taste ofGermany, right in your neighborhood.</text>
+Whether you're looking for a quick bite or a leisurely meal to share with friends, Q Café promises a taste of Germany, right in your neighborhood.</text>
 
 <image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/germanquality.jpg" src="https://sociallol.cn/QCAFESTORY/3.jpg" class="menu-image" mode="widthFix"  />
 <image bindtap="previewImage" data-src="https://sociallol.cn/QCAFESTORY/line.jpg" src="https://sociallol.cn/QCAFESTORY/line.jpg" class="menu-image" mode="widthFix"  />

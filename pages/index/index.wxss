@@ -32,7 +32,7 @@
 }
 
 .menu-category {
-  margin-bottom: 20rpx;
+  margin-bottom: 0rpx;
 }
 .menu-position {
   display: flex;
@@ -80,7 +80,7 @@
 
 .menu-price {
   text-align: center;
-
+font-weight: bold;
   font-size: 28rpx;
   color: #F17D30;
 }

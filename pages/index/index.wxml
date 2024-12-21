@@ -82,6 +82,16 @@
             </block> 
           </view>
 
+          <view wx:if="{{item.menuItemId === 103}}" class="menu-content">
+            <block wx:for="{{redsweet}}" wx:for-item="coffeeItem" wx:key="chineseName">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemChineseName}}</text></view>
+            <view class="menu-name"><text decode="{{true}}">{{coffeeItem.itemEnglishName}}</text></view>
+            <view class="menu-price">￥{{coffeeItem.itemPrice}}</view>
+          </view>
+            </block> 
+          </view>
+
           <view wx:if="{{item.menuItemId === 59}}" class="menu-content">
             <block wx:for="{{juice}}" wx:for-item="coffeeItem" wx:key="chineseName">
               <view class="menu-item">
@@ -91,7 +101,43 @@
           </view>
             </block> 
           </view>
-          <view wx:if="{{(item.menuItemId !== 40) && (item.menuItemId !== 88) && (item.menuItemId !== 74)&& (item.menuItemId!== 79) && (item.menuItemId !== 73)&& (item.menuItemId !== 59)}}" class="menu-content">
+
+          <view wx:if="{{item.menuItemId === 105}}" class="menu-content">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">皇家基尔</text></view>
+              <view class="menu-name"><text decode="{{true}}">意大利起泡酒与法国黑加仑利口酒</text></view>
+              <view class="menu-name"><text decode="{{true}}">单杯价格</text><text class="menu-price">59</text>元</view>
+              <view class="menu-name"><text decode="{{true}}">朋友欢聚尊享75折</text></view>
+              <view class="menu-name"><text class="menu-price">￥309</text><text decode="{{true}}">-瓶 (等于7杯，仅44杯)</text></view>
+
+              <view class="menu-name"><text decode="{{true}}">KIR ROYALE</text></view>
+              <view class="menu-name"><text decode="{{true}}">ITALIAN PROSECCO WITH FRENCH CRÈME DE CASSIS</text></view>
+              <view class="menu-name"><text class="menu-price">￥59</text><text decode="{{true}}"> by glass</text></view>
+              <view class="menu-name"><text decode="{{true}}">Super friends-to-share price 25% off!</text></view>
+              <view class="menu-name"><text class="menu-price">￥309</text><text decode="{{true}}"> per bottle(-7 glasses -44 per glass)</text></view>
+
+          </view>
+          </view>
+
+
+          <view wx:if="{{item.menuItemId === 106}}" class="menu-content">
+              <view class="menu-item">
+              <view class="menu-name"><text decode="{{true}}">含羞草</text></view>
+              <view class="menu-name"><text decode="{{true}}">意大利起泡酒与橙汁</text></view>
+              <view class="menu-name"><text decode="{{true}}">单杯价格</text><text class="menu-price">￥49</text>元</view>
+              <view class="menu-name"><text decode="{{true}}">朋友欢聚尊享75折</text></view>
+              <view class="menu-name"><text class="menu-price">￥258</text><text decode="{{true}}">-瓶(等于7杯，仅37杯)</text></view>
+
+              <view class="menu-name"><text decode="{{true}}">MIMOSA</text></view>
+              <view class="menu-name"><text decode="{{true}}">ITALIAN PROSECCO WITH NFC ORANGE JUICE</text></view>
+              <view class="menu-name"><text class="menu-price">￥49</text><text decode="{{true}}"> by glass</text></view>
+              <view class="menu-name"><text decode="{{true}}">Super friends-to-share price 25% off!</text></view>
+              <view class="menu-name"><text class="menu-price">￥258</text><text decode="{{true}}"> per bottle(-7 glasses -37 per glass)</text></view>
+
+          </view>
+          </view>
+
+          <view wx:if="{{(item.menuItemId !== 40) && (item.menuItemId !== 88) && (item.menuItemId !== 74)&& (item.menuItemId!== 79) && (item.menuItemId !== 73)&& (item.menuItemId !== 59)&& (item.menuItemId !== 103)&& (item.menuItemId !== 105)&& (item.menuItemId !== 106)}}" class="menu-content">
 
             <view wx:if="{{item.chineseName}}" class="menu-name"><text decode="{{true}}">{{item.chineseName}}</text></view>
             <view wx:if="{{item.englishName}}" class="menu-name"><text decode="{{true}}">{{item.englishName}}</text></view>
